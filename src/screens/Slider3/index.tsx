@@ -8,14 +8,14 @@ import { styles } from './styles';
 export function Slider3({ setPageI }: IPage) {
     const slide1 = require("../Slider3/styles")
     const slide1Texts = [
-        { id: '1', text: 'Por qual motivo devemos ler mais?'},
-        { id: '2', text: 'Tenha a opão de privar sua conta ou suas pastas.'},
-        { id: '3', text: 'Oculte seu perfiç em mecanismos de pesquisa.'},
+        { id: '1', text: 'Proporciona um conhecimento amplo e diversificado sobre vários assuntos ao leitor'},
+        { id: '2', text: 'A leitura estimula o raciocínio,melhora o vocabulário e aprimora a capacidade interpretativa'},
+    
     ]
     return (
         <ImageBackground source={slide1} style={styles.container} >
             <View style={styles.panel}>
-                <ComponentTitleSlider titleI='Privacidade e Segurança' />
+                <ComponentTitleSlider titleI='Por qual motivo devemos ler mais?' />
                 <FlatList
                     data={slide1Texts}
                     renderItem={({ item }) =>
@@ -29,6 +29,7 @@ export function Slider3({ setPageI }: IPage) {
                 <ComponentButtonSlider onPressI={() => setPageI(2)} cor={false}/>
                 <ComponentButtonSlider onPressI={() => setPageI(3)} cor={true}/>
                 <ComponentButtonSlider onPressI={() => setPageI(4)} cor={false}/>
+                <ComponentButtonSlider onPressI={() => setPageI(5)} cor={false}/>
             </View>
         </ImageBackground>
     );

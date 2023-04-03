@@ -8,14 +8,14 @@ import { styles } from './styles';
 export function Slider1({ setPageI }: IPage) {
     const slide1 = require("../Slider1/styles")
     const slide1Texts = [
-        { id: '1', text: 'Como fazer uma resenha?'},
-        { id: '2', text: 'Tenha a opão de privar sua conta ou suas pastas.'},
-        { id: '3', text: 'Oculte seu perfiç em mecanismos de pesquisa.'},
+        { id: '1', text: 'Insira o título do livro'},
+        { id: '2', text: 'Insira o nome do autor'},
+        { id: '3', text: 'Escreva sua resenha e publique no seu perfil'},
     ]
     return (
         <ImageBackground source={slide1} style={styles.container} >
             <View style={styles.panel}>
-                <ComponentTitleSlider titleI='Privacidade e Segurança' />
+                <ComponentTitleSlider titleI='Como fazer uma resenha?' />
                 <FlatList
                     data={slide1Texts}
                     renderItem={({ item }) =>
@@ -29,6 +29,8 @@ export function Slider1({ setPageI }: IPage) {
                 <ComponentButtonSlider onPressI={() => setPageI(2)} cor={false}/>
                 <ComponentButtonSlider onPressI={() => setPageI(3)} cor={false}/>
                 <ComponentButtonSlider onPressI={() => setPageI(4)} cor={false}/>
+                <ComponentButtonSlider onPressI={() => setPageI(5)} cor={false}/>
+            
             </View>
         </ImageBackground>
     );

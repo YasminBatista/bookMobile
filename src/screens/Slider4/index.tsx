@@ -8,14 +8,14 @@ import { styles } from './styles';
 export function Slider4({ setPageI }: IPage) {
     const slide1 = require("../Slider4/styles")
     const slide1Texts = [
-        { id: '1', text: 'Como criar clubes de leituras?'},
-        { id: '2', text: 'Tenha a opão de privar sua conta ou suas pastas.'},
-        { id: '3', text: 'Oculte seu perfiç em mecanismos de pesquisa.'},
+        { id: '1', text: 'Crie um nome para o clube de leitura'},
+        { id: '2', text: 'Adicione os participantes do clube'},
+        { id: '3', text: 'E por fim defina as metas de leitura'},
     ]
     return (
         <ImageBackground source={slide1} style={styles.container} >
             <View style={styles.panel}>
-                <ComponentTitleSlider titleI='Privacidade e Segurança' />
+                <ComponentTitleSlider titleI='Como criar clubes de leitura?' />
                 <FlatList
                     data={slide1Texts}
                     renderItem={({ item }) =>
@@ -29,6 +29,7 @@ export function Slider4({ setPageI }: IPage) {
                 <ComponentButtonSlider onPressI={() => setPageI(2)} cor={false}/>
                 <ComponentButtonSlider onPressI={() => setPageI(3)} cor={false}/>
                 <ComponentButtonSlider onPressI={() => setPageI(4)} cor={true}/>
+                <ComponentButtonSlider onPressI={() => setPageI(5)} cor={false}/>
             </View>
         </ImageBackground>
     );
