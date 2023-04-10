@@ -9,14 +9,14 @@ import {styles} from "./styles"
 import { TextInput } from "react-native-gesture-handler"
 import { colors } from "../../styles/colors"
 import { Foundation } from '@expo/vector-icons'; 
-
-
- 
- export function Login(){
+import { MaterialCommunityIcons } from '@expo/vector-icons'; 
+import { LoginTypes } from "../../navigations/login.navigation"
+import { ComponentButtonInterface } from "../../components"
+ export function Cadastrar({navigation}: LoginTypes){
     return (
         <View style={styles.container}>
             <KeyboardAvoidingView>
-                <Text style={styles.title}>Login </Text>
+                <Text style={styles.title}>Cadastrar </Text>
                 <View style={styles.formrow}>
                     <MaterialIcons name="email" style={styles.icon}/>
                     <TextInput
@@ -39,6 +39,18 @@ import { Foundation } from '@expo/vector-icons';
 
                     />
                 </View>
+                <View style={styles.formrow}>
+                    <MaterialCommunityIcons name="rename-box" size={24} color="black" />
+                    <TextInput
+                      placeholder="Nome"
+                      placeholderTextColor={colors.black}
+                      autoCapitalize="none"
+                      style={styles.input}
+
+                    />
+                </View>
+                <ComponentButtonInterface title="Salvar" type="primary" onPressI={()=>{console.log('Salvar')}}/>
+                <ComponentButtonInterface title="Voltar" type="fourth" onPressI={()=>{navigation.navigate('Login')}}/>
             </KeyboardAvoidingView>
         </View>
     )

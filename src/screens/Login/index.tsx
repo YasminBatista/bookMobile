@@ -10,9 +10,9 @@ import { TextInput } from "react-native-gesture-handler"
 import { colors } from "../../styles/colors"
 import { Foundation } from '@expo/vector-icons'; 
 import {ComponentButtonInterface} from "../../components"
-
+import { LoginTypes } from "../../navigations/login.navigation";
  
- export function Login(){
+ export function Login({navigation}: LoginTypes){
     return (
         <View style={styles.container}>
             <KeyboardAvoidingView>
@@ -39,8 +39,8 @@ import {ComponentButtonInterface} from "../../components"
 
                     />
                 </View>
-                <ComponentButtonInterface title="Login" type="primary" onPressI={()=>{console.log('Login')}}/>
-                <ComponentButtonInterface title="Cadastre-se" type="fourth" onPressI={()=>{console.log('Cadastre-se')}}/>
+                <ComponentButtonInterface title="Entrar" type="primary" onPressI={()=>{console.log('Entrar')}}/>
+                <ComponentButtonInterface title="Cadastre-se" type="fourth" onPressI={()=>{navigation.navigate('Cadastrar')}}/>
             </KeyboardAvoidingView>
         </View>
     )
