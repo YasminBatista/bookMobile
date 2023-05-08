@@ -49,7 +49,7 @@ import { ComponentButtonInterface } from "../../components"
 
                     />
                 </View>
-                <ComponentButtonInterface title="Salvar" type="primary" onPressI={()=>{console.log('Salvar')}}/>
+                <ComponentButtonInterface title="Salvar" type="primary" onPressI={()=>{navigation.navigate('Drawer')}}/>
                 <ComponentButtonInterface title="Voltar" type="fourth" onPressI={()=>{navigation.navigate('Login')}}/>
             </KeyboardAvoidingView>
         </View>

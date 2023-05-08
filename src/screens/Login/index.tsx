@@ -39,7 +39,7 @@ import { LoginTypes } from "../../navigations/login.navigation";
 
                     />
                 </View>
-                <ComponentButtonInterface title="Entrar" type="primary" onPressI={()=>{console.log('Entrar')}}/>
+                <ComponentButtonInterface title="Entrar" type="primary" onPressI={()=>{navigation.navigate('Tab')}}/>
                 <ComponentButtonInterface title="Cadastre-se" type="fourth" onPressI={()=>{navigation.navigate('Cadastrar')}}/>
             </KeyboardAvoidingView>
         </View>
