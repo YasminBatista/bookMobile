@@ -8,6 +8,7 @@ type DrawerParamList ={
   Perfil:undefined
   Camera: undefined
   
+  
 }
 type DrawerScreenNavigationProp = DrawerNavigationProp<DrawerParamList, 'Perfil'>
   export type DrawerTypes ={
@@ -42,7 +43,7 @@ type DrawerScreenNavigationProp = DrawerNavigationProp<DrawerParamList, 'Perfil'
             <AntDesign name='camera' size={24} color={colors.white} />
 
           )
-            
+         
         }}
         />
       
