@@ -1,9 +1,5 @@
 import React from "react"
- import { 
-        View,
-        Text,
-        KeyboardAvoidingView
-     } from "react-native"
+ import { View,Text,KeyboardAvoidingView } from "react-native"
 import {MaterialIcons} from '@expo/vector-icons'
 import {styles} from "./styles"
 import { TextInput } from "react-native-gesture-handler"
