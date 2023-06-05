@@ -26,30 +26,33 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-      
-        "plugins": [
-          [
-            "expo-camera",
-            {
-              "cameraPermission": "Permita $(PRODUCT_NAME) acessar sua camera."
-            }
-          ],
-          [
-            "expo-media-library",
-            {
-              "photosPermisson": "Allow $(PRODUCT_NAME) to access your photos.",
-              "savePhotosPermisson": "Allow $(PRODUCT_NAME) to save photos.",
-              "isAccessMediaLocationEnabled": true
-            }
-          ],
-          [
-            "expo-barcode-scanner",
-            {
-              "cameraPermission":"Permita $(PRODUCT_NAME) acessar sua camera."
-            }
-          ]
-        ]
-
-
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Permita $(PRODUCT_NAME) acessar sua camera."
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermisson": "Allow $(PRODUCT_NAME) to access your photos.",
+          "savePhotosPermisson": "Allow $(PRODUCT_NAME) to save photos.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ],
+      [
+        "expo-barcode-scanner",
+        {
+          "cameraPermission": "Permita $(PRODUCT_NAME) acessar sua camera."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
+        }
+      ]
+    ]
   }
 }
