@@ -23,7 +23,7 @@ import { Dimensions, StyleSheet } from "react-native";
     },
     text: {
       fontSize: 24,
-      fontWeight: 'bold',
+      
       color: 'white',
     },
     img:{
