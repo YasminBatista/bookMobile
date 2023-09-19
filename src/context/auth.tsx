@@ -25,8 +25,9 @@ const AuthProvider = ({children}: IProvider) => {
             email,
             password,
         });
+        console.log(response.data)
         const user = response.data;
-        api.defaults.headers.common.Authorization = `Baerer ${user.token.token}`;
+        api.defaults.headers.common.Authorization = `Bearer ${user.token.token}`;
         setAuth({ ...user });
         await AsyncStorage.setItem("user", JSON.stringify(user))
     }, [])

@@ -25,7 +25,7 @@ export interface IUser{
         return api.post('/register', data)
     }
     login(data:IAuthenticate){
-        return api.post<IUserLogin>('/login')
+        return api.post<IUserLogin>('/login',data)
     }
  }
  export default new UserData()

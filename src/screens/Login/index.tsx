@@ -29,12 +29,19 @@ export function Login({navigation}:LoginTypes) {
                 setIsLoading(false);
             }
         }catch(error){
+            console.log(error)
             const err = error as AxiosError;
             const message = err.response?.data as string
             Alert.alert(message)
             setIsLoading(false)
         }
     }
+
+    function handleChange(item:IAuthenticate){
+        setData({...data,...item})
+    }
+
+    
     return (
         <View style={styles.container}>
             <KeyboardAvoidingView>
@@ -47,6 +54,7 @@ export function Login({navigation}:LoginTypes) {
                       keyboardType="email-address"
                       autoCapitalize="none"
                       style={styles.input}
+                      onChangeText={(i) => handleChange({email: i})}
 
                     />
                 </View>
@@ -58,10 +66,11 @@ export function Login({navigation}:LoginTypes) {
                       secureTextEntry={true}
                       autoCapitalize="none"
                       style={styles.input}
+                      onChangeText={(i) => handleChange({password: i})}
 
                     />
                 </View>
-                <ComponentButtonInterface title="Entrar" type="primary" onPressI={()=>{navigation.navigate('Tab')}}/>
+                <ComponentButtonInterface title="Entrar" type="primary" onPressI={handleSignIn}/>
                 <ComponentButtonInterface title="Cadastre-se" type="fourth" onPressI={()=>{navigation.navigate('Cadastrar')}}/>
             </KeyboardAvoidingView>
         </View>
