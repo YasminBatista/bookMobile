@@ -1,5 +1,5 @@
 import { View, Text } from "react-native";
-import { ComponentButtonInterface, ComponentLoading } from "../../components";
+import { ComponentLoading } from "../../components";
 import { TabTypes } from "../../navigations/tab.navigation";
 import { styles } from "./styles";
 import * as Notifications from 'expo-notifications';
@@ -17,6 +17,7 @@ Notifications.setNotificationHandler({
 });
 export function Perfil({navigation}:TabTypes){
     const { user } = useAuth();
+    const { signOut } = useAuth();
     const [isLoading, setIsLoading] = useState(true);
     function handleVoltar(){
         const login = navigation.getParent()
@@ -41,7 +42,7 @@ export function Perfil({navigation}:TabTypes){
             ) : (
                 <View style={styles.container}>
                     <Text>Perfil</Text>
-                    <TouchableOpacity onPress={handleVoltar}>
+                    <TouchableOpacity onPress={signOut}>
                         <Text>Voltar</Text>
                     </TouchableOpacity>
                 </View>
